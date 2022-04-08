@@ -53,13 +53,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hAf-t7-s69">
                                         <rect key="frame" x="0.0" y="296.33333333333331" width="418" height="150"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-PD-KUW">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scissors" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-PD-KUW">
                                                 <rect key="frame" x="0.0" y="0.0" width="126" height="150"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="oqb-90-EUW">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TheRock" translatesAutoresizingMaskIntoConstraints="NO" id="oqb-90-EUW">
                                                 <rect key="frame" x="146" y="0.0" width="126" height="150"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="CEw-aY-rtn">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper" translatesAutoresizingMaskIntoConstraints="NO" id="CEw-aY-rtn">
                                                 <rect key="frame" x="292" y="0.0" width="126" height="150"/>
                                             </imageView>
                                         </subviews>
@@ -90,9 +90,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="1439" height="800"/>
-        <image name="Image-1" width="1263" height="1155"/>
-        <image name="Image-2" width="494" height="403"/>
+        <image name="Paper" width="1263" height="1155"/>
+        <image name="Scissors" width="494" height="403"/>
+        <image name="TheRock" width="1439" height="800"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
