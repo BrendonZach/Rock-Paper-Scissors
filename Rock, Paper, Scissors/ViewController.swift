@@ -14,6 +14,7 @@ class ViewController: UIViewController
     
     @IBOutlet weak var computerChoice: UIImageView!
     @IBOutlet weak var yourChoice: UIImageView!
+    var imagenames = ["Scissors", "Paper", "TheRock"]
     
     override func viewDidLoad()
     {
@@ -27,6 +28,7 @@ class ViewController: UIViewController
 
     @IBAction func tapGesture(_ sender: Any)
     {
+        
         
         
     }
