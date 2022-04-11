@@ -10,9 +10,10 @@ import UIKit
 class ViewController: UIViewController
 {
 
-    @IBOutlet weak var scissors: UIImageView!
-    @IBOutlet weak var theRock: UIImageView!
-    @IBOutlet weak var paper: UIImageView!
+    @IBOutlet var rockPaperScissors: [UIImageView]!
+    
+    @IBOutlet weak var computerChoice: UIImageView!
+    @IBOutlet weak var yourChoice: UIImageView!
     
     override func viewDidLoad()
     {
@@ -24,6 +25,11 @@ class ViewController: UIViewController
         
     }
 
-
+    @IBAction func tapGesture(_ sender: Any)
+    {
+        
+        
+    }
+    
 }
 

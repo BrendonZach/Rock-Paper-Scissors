@@ -26,7 +26,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click one, Rock, Paper, or Scissors." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBA-dM-FS2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your choice                              Computer choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-yS-4ec">
                                         <rect key="frame" x="0.0" y="48" width="418" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -45,6 +45,15 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPQ-oH-mBB">
                                         <rect key="frame" x="0.0" y="196.33333333333334" width="418" height="100.00000000000003"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click one, Rock, Paper, or Scissors." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBA-dM-FS2">
+                                                <rect key="frame" x="0.0" y="79" width="418" height="20.333333333333329"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Rth-hb-kO2"/>
@@ -63,9 +72,13 @@
                                                 <rect key="frame" x="292" y="0.0" width="126" height="150"/>
                                             </imageView>
                                         </subviews>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="1DO-JO-Sbf"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="bOX-kM-DN1" appends="YES" id="B1J-x6-6L5"/>
+                                        </connections>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -79,12 +92,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="paper" destination="CEw-aY-rtn" id="gHc-CY-rnI"/>
-                        <outlet property="scissors" destination="cSn-PD-KUW" id="Gb0-mv-pNy"/>
-                        <outlet property="theRock" destination="oqb-90-EUW" id="NVd-5H-kSu"/>
+                        <outlet property="computerChoice" destination="E18-nF-1rY" id="rzt-9h-TSd"/>
+                        <outlet property="yourChoice" destination="0XE-P6-a4J" id="2V3-yH-rGJ"/>
+                        <outletCollection property="rockPaperScissors" destination="cSn-PD-KUW" collectionClass="NSMutableArray" id="TTb-NK-ZQ7"/>
+                        <outletCollection property="rockPaperScissors" destination="oqb-90-EUW" collectionClass="NSMutableArray" id="nZj-oe-CNH"/>
+                        <outletCollection property="rockPaperScissors" destination="CEw-aY-rtn" collectionClass="NSMutableArray" id="jNm-F2-4L6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bOX-kM-DN1">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="Dho-pE-Oqz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="33.644859813084111" y="82.937365010799141"/>
         </scene>
