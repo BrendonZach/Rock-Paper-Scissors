@@ -20,7 +20,9 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
       // Do any additional setup after loading the view.
-        
+        var scissorsImage = UIImage(named: imagenames[0])
+        var paperImage = UIImage(named: imagenames[0])
+        var theRockImage = UIImage(named: imagenames[0])
         
         
         
@@ -28,6 +30,8 @@ class ViewController: UIViewController
 
     @IBAction func tapGesture(_ sender: Any)
     {
+        
+        let randomNumber = Int.random(in: 1...3)
         
         
         
