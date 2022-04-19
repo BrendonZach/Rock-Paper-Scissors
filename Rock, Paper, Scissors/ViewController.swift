@@ -15,7 +15,8 @@ class ViewController: UIViewController
     @IBOutlet weak var computerChoice: UIImageView!
     @IBOutlet weak var yourChoice: UIImageView!
     var imagenames = ["Scissors", "Paper", "TheRock"]
-    
+    var userChoice = 4
+    @IBOutlet weak var gameMovesView: UIStackView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -24,17 +25,37 @@ class ViewController: UIViewController
         var paperImage = UIImage(named: imagenames[0])
         var theRockImage = UIImage(named: imagenames[0])
         
-        
+      
         
     }
 
     @IBAction func tapGesture(_ sender: Any)
     {
         
-        let randomNumber = Int.random(in: 1...3)
+        let randomNumber = Int.random(in: 0...2)
+        var botImageView = UIImage(named: imagenames[randomNumber])
         
+        computerChoice.image = botImageView
         
+        let selectedPoint = ((sender as! AnyObject).location(in: gameMovesView))
         
+        for view in rockPaperScissors
+        {
+            if
+                view.frame.contains(selectedPoint)
+            {
+                userChoice = view.tag
+                yourChoice.image = UIImage(named: imagenames[userChoice])
+                
+                
+                
+            }
+                    
+                    
+            
+            
+            
+        }
     }
     
 }

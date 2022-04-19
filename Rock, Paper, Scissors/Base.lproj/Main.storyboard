@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H8X-mn-0bC">
-                                <rect key="frame" x="5" y="49" width="418" height="446.33333333333326"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H8X-mn-0bC">
+                                <rect key="frame" x="5" y="48.999999999999972" width="418" height="468.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbg-Hm-fhi">
                                         <rect key="frame" x="0.0" y="0.0" width="418" height="48"/>
@@ -32,19 +32,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-hy-7nh">
-                                        <rect key="frame" x="0.0" y="68.333333333333314" width="418" height="128"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-hy-7nh">
+                                        <rect key="frame" x="0.0" y="68.333333333333314" width="418" height="150"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0XE-P6-a4J">
-                                                <rect key="frame" x="0.0" y="0.0" width="204" height="128"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0XE-P6-a4J">
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="150"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E18-nF-1rY">
-                                                <rect key="frame" x="214" y="0.0" width="204" height="128"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E18-nF-1rY">
+                                                <rect key="frame" x="214" y="0.0" width="204" height="150"/>
                                             </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="w9q-SM-Vn5"/>
+                                        </constraints>
                                     </stackView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPQ-oH-mBB">
-                                        <rect key="frame" x="0.0" y="196.33333333333334" width="418" height="100.00000000000003"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPQ-oH-mBB">
+                                        <rect key="frame" x="0.0" y="218.33333333333331" width="418" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click one, Rock, Paper, or Scissors." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBA-dM-FS2">
                                                 <rect key="frame" x="0.0" y="79" width="418" height="20.333333333333329"/>
@@ -59,8 +62,8 @@
                                             <constraint firstAttribute="height" constant="100" id="Rth-hb-kO2"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hAf-t7-s69">
-                                        <rect key="frame" x="0.0" y="296.33333333333331" width="418" height="150"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hAf-t7-s69">
+                                        <rect key="frame" x="0.0" y="318.33333333333331" width="418" height="150"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scissors" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-PD-KUW">
                                                 <rect key="frame" x="0.0" y="0.0" width="126" height="150"/>
@@ -93,6 +96,7 @@
                     </view>
                     <connections>
                         <outlet property="computerChoice" destination="E18-nF-1rY" id="rzt-9h-TSd"/>
+                        <outlet property="gameMovesView" destination="hAf-t7-s69" id="tO9-Yd-I4K"/>
                         <outlet property="yourChoice" destination="0XE-P6-a4J" id="2V3-yH-rGJ"/>
                         <outletCollection property="rockPaperScissors" destination="cSn-PD-KUW" collectionClass="NSMutableArray" id="TTb-NK-ZQ7"/>
                         <outletCollection property="rockPaperScissors" destination="oqb-90-EUW" collectionClass="NSMutableArray" id="nZj-oe-CNH"/>
