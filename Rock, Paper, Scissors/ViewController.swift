@@ -12,6 +12,7 @@ class ViewController: UIViewController
 
     @IBOutlet var rockPaperScissors: [UIImageView]!
     
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var computerChoice: UIImageView!
     @IBOutlet weak var yourChoice: UIImageView!
     var imagenames = ["Scissors", "Paper", "TheRock"]
@@ -52,7 +53,51 @@ class ViewController: UIViewController
             }
                     
                     
+          if randomNumber == userChoice
+          {
+              textView.text = "Tie game!"
+          }
+            else if randomNumber == 2 && userChoice == 1
+            {
+                
+                textView.text = "You Lose!"
+                
+            }
+            else if randomNumber == 2 && userChoice == 0
+            {
+                
+                textView.text = "You Win!"
+                
+            }
             
+            else if randomNumber == 1 && userChoice == 2
+            {
+                
+                textView.text = "You Win!"
+                
+            }
+            else if randomNumber == 1 && userChoice == 0
+            {
+                
+                textView.text = "You Lose!"
+                
+            }
+            else if randomNumber == 0 && userChoice == 1
+            {
+                
+                textView.text = "You Win!"
+                
+            }
+            else if randomNumber == 0 && userChoice == 2
+            {
+                
+                textView.text = "You Lose!"
+                
+            }
+            else
+            {
+                textView.text = "You Lose!"
+            }
             
             
         }
